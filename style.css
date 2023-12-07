@@ -11,6 +11,11 @@
   transition: .3s;
 }
 
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
 /* Global Styles */
 
 .container {
@@ -53,7 +58,7 @@ header .container {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 20px;
 }
 
 header .logo span {
@@ -67,6 +72,7 @@ header .logo span::after {
 header nav ul {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
   color: #fff;
 }
 
@@ -76,7 +82,6 @@ header nav ul li::after {
   background-color: #EE952D;
   height: 2px;
   width: 20px;
-  margin: auto;
   transition: width 0.3s ease;
 }
 
@@ -93,7 +98,7 @@ header nav ul li a {
 #principal {
   padding: 10px;
   background: url(./imgs/principal.jpg) no-repeat center center / cover;
-  height: 500px;
+  height: 600px;
 }
 
 #principal .container {
@@ -103,11 +108,58 @@ header nav ul li a {
 }
 
 #principal h1 {
-  background-color: #0000003f;
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 20px;
   font-size: 2rem;
   max-width: 19ch;
   color: #fff;
   font-weight: 'Roboto', sans-serif;
+}
+
+/* Ambiente */
+
+#ambiente {
+  padding: 40px 10px;
+}
+
+#ambiente img {
+  border-radius: 4px;
+}
+
+#ambiente .container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+#ambiente .container>div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+#ambiente h2 {
+  font-size: 1.7rem;
+  max-width: 20ch;
+  color: #233027;
+}
+
+@media only screen and (max-width: 40rem) {
+  #ambiente .container>div {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  #ambiente .container>div h2 {
+    order: 1;
+    max-width: 100%;
+    font-size: 1.2rem;
+  }
+
+  #ambiente .container>div img {
+    order: 2;
+  }
+
 }
