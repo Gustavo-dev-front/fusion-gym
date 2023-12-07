@@ -36,6 +36,7 @@ img {
 
 .logo span {
   font-size: .8rem;
+  white-space: nowrap;
 }
 
 .logo span::after {
@@ -146,6 +147,113 @@ header nav ul li a {
   color: #233027;
 }
 
+/* Fale conosco */
+
+#fale-conosco {
+  background: url(./imgs/fale-conosco.jpg) no-repeat center center / cover;
+  height: 600px;
+}
+
+#fale-conosco .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  min-height: 100%;
+  gap: 20px 40px;
+  padding: 10px;
+}
+
+#fale-conosco h2 {
+  color: #233027;
+  grid-column: 1/-1;
+  font-size: 1.7rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  width: max-content;
+  margin: auto;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+#fale-conosco form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+#fale-conosco input,
+#fale-conosco textarea,
+#fale-conosco button {
+  display: block;
+  padding: 10px;
+  width: 100%;
+  font-family: 'Poppins' !important;
+}
+
+#fale-conosco input,
+#fale-conosco textarea {
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+#fale-conosco textarea {
+  resize: none;
+}
+
+#fale-conosco button {
+  background-color: #233027;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+#fale-conosco button:hover {
+  opacity: .5;
+}
+
+#fale-conosco address  {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #233027;
+  border-radius: 4px;
+  padding: 20px;
+  max-width: max-content;
+}
+
+#fale-conosco address span {
+  display: block;
+  color: #ccc;
+}
+
+#fale-conosco address a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  margin-top: 20px;
+  box-shadow: 0 0 10px 1px rgba(34, 47, 38, 0.2);
+}
+
+footer .container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  color: #233027;
+  padding: 10px;
+}
+
+footer p {
+  max-width: max-content;
+  margin: auto;
+}
+
+footer .logo span::after {
+  background-color: #233027;
+}
+
+
 @media only screen and (max-width: 40rem) {
   #ambiente .container>div {
     grid-template-columns: 1fr;
@@ -160,6 +268,10 @@ header nav ul li a {
 
   #ambiente .container>div img {
     order: 2;
+  }
+
+  #fale-conosco .container {
+    grid-template-columns: 1fr;
   }
 
 }
