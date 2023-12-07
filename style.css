@@ -247,6 +247,7 @@ footer .container {
 footer p {
   max-width: max-content;
   margin: auto;
+  font-size: .8rem;
 }
 
 footer .logo span::after {
